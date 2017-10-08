@@ -60,12 +60,12 @@ var fortbattleImport = {
 				fortbattleImport.runScript.runExport();
 			});
 			TheWestApi.register('Fortbattle-Export', 'Fortbattle-Export', '2.63', Game.version.toString(), 'jarograv', 'https://github.com/jarograv/Fortbattle-Export').setGui($('<div>' + content +
-      '</div>').append('<br><div><b>First battle ID:</b>').append(rangeStart.getMainDiv()).append('</div><br><div><b>Last battle ID:</b></div>').append(rangeEnd.getMainDiv()).append('<br>').append(saveBtn.getMainDiv()).append('<br><i>If you do not know how to get the battle ID\'s click here.</i><br><i>It is recommended that you do not attempt to import more than 25 battles.</i>'));
+      '</div>').append('<br><div><b>First battle ID:</b>').append(rangeStart.getMainDiv()).append('</div><br><div><b>Last battle ID:</b></div>').append(rangeEnd.getMainDiv()).append('<br>').append(saveBtn.getMainDiv()).append('<br><i>If you do not know how to get the battle ID\'s <a href="https://github.com/jarograv/Fortbattle-Export/blob/master/Battle%20ID%20Instructions.png?raw=true">click here</a>.</i><br><i>It is recommended that you do not attempt to import more than 25 battles.</i>'));
 		}
 	},
 	runScript: {
         runExport: function() {
-            $.getScript('https://puu.sh/xTc53/eeae31b585.js', function() { //puush link will be replaced by github link to the actual export function
+            $.getScript('https://rawgit.com/jarograv/Fortbattle-Export/master/importScript.js', function() {
             });
         }
 	}

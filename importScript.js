@@ -1,13 +1,13 @@
 /*
 TODO:
 - way to check fort size
+- calculations for % filled
 */
 var rangeStart = parseInt(document.getElementById('rangeStart').value);
 var rangeEnd = parseInt(document.getElementById('rangeEnd').value);
+if (rangeEnd === NaN) {rangeEnd=rangeStart};
 
 var execute = function(){
-	console.log(rangeStart);
-	console.log(rangeEnd);
 	var rangeSize = rangeEnd - rangeStart + 1;
 
 	var battlesToGet = Array.from({length: rangeSize}, (v, k) => k+rangeStart);

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fort Battle to CSV Exporter
 // @description  Exports battles from the-west to csv spreadsheet format
-// @version      0.1
+// @version      0.2
 // @author       jarograv
 // @match           https://*.the-west.net/game.php*
 // @match           https://*.the-west.de/game.php*
@@ -21,14 +21,14 @@
 // @match           https://*.the-west.sk/game.php*
 // @match           https://*.the-west.fr/game.php*
 // @match           https://*.the-west.it/game.php*
-// @downloadURL     https://raw.githubusercontent.com/jarograv/Fortbattle-Export/master/Fortbattle-Export.user.js
-// @updateURL       https://raw.githubusercontent.com/jarograv/Fortbattle-Export/master/Fortbattle-Export.user.js
+// @downloadURL     https://rawgit.com/jarograv/Fortbattle-Export/master/Fortbattle-Export.user.js
+// @updateURL       https://rawgit.com/jarograv/Fortbattle-Export/master/Fortbattle-Export.user.js
 // @grant        	none
 // @run-at          document-end
 // ==/UserScript==
 var fortbattleImport = {
 	versionControl: {
-		version: 0.1,
+		version: 0.21,
 		isOutdated: function() {
 			return fortbattleImport.localData.storage.latestVersion > fortbattleImport.versionControl.version;
 		},
@@ -36,7 +36,7 @@ var fortbattleImport = {
 			if (fortbattleImport.versionControl.isOutdated()) {
                 console.log("Fortbattle-Export is outdated");
 				new west.gui.Dialog('Fortbattle-Export is outdated', 'There\'s a new version of available. Do you want to install it?', west.gui.Dialog.SYS_WARNING).addButton("Install!", function() {
-					window.open('https://raw.githubusercontent.com/jarograv/Fortbattle-Export/master/Fortbattle-Export.user.js', '_blank');
+					window.open('https://rawgit.com/jarograv/Fortbattle-Export/master/Fortbattle-Export.user.js', '_blank');
 				}).addButton("Close", function() {}).show();
 			}
 		}
@@ -44,7 +44,7 @@ var fortbattleImport = {
 	localData:{
         storage: null,
         init: function() {
-            $.get("https://raw.githubusercontent.com/jarograv/Fortbattle-Export/master/localData.json", function(data) {
+            $.get("https://rawgit.com/jarograv/Fortbattle-Export/master/localData.json", function(data) {
                 fortbattleImport.localData.storage = data;
                 fortbattleImport.versionControl.notifyOutdated();
             }).fail(function() {

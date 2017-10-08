@@ -6,10 +6,8 @@ TODO:
 var rangeStart = parseInt(document.getElementById('rangeStart').value);
 var rangeEnd = parseInt(document.getElementById('rangeEnd').value);
 if (rangeEnd === NaN) {rangeEnd=rangeStart};
-
 var execute = function(){
 	var rangeSize = rangeEnd - rangeStart + 1;
-
 	var battlesToGet = Array.from({length: rangeSize}, (v, k) => k+rangeStart);
 	var battleData = [];
 	var fields = [];

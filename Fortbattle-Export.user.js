@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fort Battle to CSV Exporter
 // @description  Exports battles from the-west to csv spreadsheet format
-// @version      0.40
+// @version      0.41
 // @author       jarograv
 // @match           https://*.the-west.net/game.php*
 // @match           https://*.the-west.de/game.php*
@@ -37,7 +37,7 @@ var fortbattleImport = {
 				fortbattleImport.runScript.runExport();
 			});
 			TheWestApi.register('Fortbattle-Export', 'Fortbattle-Export', '2.63', Game.version.toString(), 'jarograv', 'https://github.com/jarograv/Fortbattle-Export').setGui($('<div>' + content +
-      '</div>').append('<br><div><b>First battle ID:</b>').append(rangeStart.getMainDiv()).append('</div><br><div><b>Last battle ID:</b></div>').append(rangeEnd.getMainDiv()).append('<br>').append(saveBtn.getMainDiv()).append('<br><i>If you do not know how to get the battle ID\'s <a href="https://github.com/jarograv/Fortbattle-Export/blob/master/Battle%20ID%20Instructions.png?raw=true">click here</a>.</i><br><i>It is recommended that you do not attempt to export more than 50 battles at once.</i>').append('<br>Current version: ').append(fortbattleImport.versionControl.version));
+      '</div>').append('<br><div><b>First battle ID:</b>').append(rangeStart.getMainDiv()).append('</div><br><div><b>Last battle ID:</b></div>').append(rangeEnd.getMainDiv()).append('<br>').append(saveBtn.getMainDiv()).append('<br><i>If you do not know how to get the battle ID\'s <a href="https://github.com/jarograv/Fortbattle-Export/blob/master/Battle%20ID%20Instructions.png?raw=true">click here</a>.</i><br><i>It is recommended that you do not attempt to export more than 50 battles at once.</i>'));
 		}
 	},
 	runScript: {

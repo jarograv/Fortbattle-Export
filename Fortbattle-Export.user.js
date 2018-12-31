@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fort Battle to CSV Exporter
 // @description  Exports battles from the-west to csv spreadsheet format
-// @version      0.50
+// @version      0.51
 // @author       jarograv
 // @match           https://*.the-west.net/game.php*
 // @match           https://*.the-west.de/game.php*
@@ -159,9 +159,7 @@ var execute = function(){
             });
             a.href = URL.createObjectURL(file);
             a.download = name;
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
+            a.dispatchEvent(new MouseEvent('click'));
         }
 		download(battleData, 'battleData.csv', 'text/csv');
 	});
